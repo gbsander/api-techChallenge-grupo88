@@ -42,6 +42,8 @@ Podera acessa-la através deste link: https://0d13-2804-7f0-a218-8bb-8d3f-5eea-c
   - `/api/exportacao?subcategory=espumantes`: Espumantes (Exportação).
   - `/api/exportacao?subcategory=uvas_frescas`: Uvas Frescas (Exportação).
   - `/api/exportacao?subcategory=suco_de_uva`: Suco de Uva (Exportação).
+ 
+    
 
 ## 📝Instruções de Uso da API
 1. **Clonar o Repositório**:
@@ -66,6 +68,14 @@ Podera acessa-la através deste link: https://0d13-2804-7f0-a218-8bb-8d3f-5eea-c
         Usuário: usuarioteste
         Senha: 1234
 
+5. **Use o Ngrok para criar um túnel e compartilhar a API**:
+   - ngrok http 5000 
+
+## Diagrama da aplicação
+![Diagrama da Arquitetura](diagrama-api-embrapa.jpg)
+
+
+  
   **Menu da API de Dados Vitivinícolas**
   
   Escolha uma categoria e subcategoria para acessar os dados:
