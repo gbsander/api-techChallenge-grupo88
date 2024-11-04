@@ -167,4 +167,4 @@ Podera acessa-la através deste link: https://0d13-2804-7f0-a218-8bb-8d3f-5eea-c
 - Gabriel Tenorio Bittencourt
 - Francisco Marcellus Carmo do Nascimento
 - Guilherme Savaio Marquerie Rodriguez
-- Guilherme Sarter
+- Guilherme Becker Sander
