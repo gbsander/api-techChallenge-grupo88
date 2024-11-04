@@ -10,7 +10,7 @@ swagger = Swagger(app)
 # Inicializar o auth
 auth = HTTPBasicAuth()
 users = {
-    "usuarioteste": "1234"  # Troque para um nome de usuário e senha seguros
+    "usuarioteste": "1234"
 }
 
 @auth.verify_password
@@ -32,7 +32,7 @@ def get_data(category):
         in: path
         type: string
         required: true
-        description: Categoria de dados para extrair (e.g., producao, processamento)
+        description: Diz respeito a categoria de dados a serem extraídos e correspondem as abas do site da Embrapa. São os dados de Produção, Processamento, Comercialização, Importação e Exportação
       - name: start_year
         in: query
         type: integer
@@ -49,7 +49,7 @@ def get_data(category):
         in: query
         type: string
         required: false
-        description: Subcategoria para filtragem adicional (necessário para processamento, importacao e exportacao)
+        description: São os tipos de produtos que foram processados, importados e exportados. São presentes apenas para as categorias de "Processamento" (subcategorias "viniferas", "americanas e híbridas", "uvas de mesa" e "sem classificação"); "Importação"(subcategorias "vinhos de mesa", "espumantes", "uvas frescas", "uvas passas" e "suco de uva") e "Exportação"(subcategorias "vinhos de mesa", "espumantes", "uvas frescas", e "suco de uva")
     responses:
       200:
         description: Dados obtidos com sucesso
@@ -114,7 +114,8 @@ def home():
         <li><a href="/api/exportacao?subcategory=uvas_frescas">/api/exportacao?subcategory=uvas_frescas</a>: Uvas Frescas (Exportação).</li>
         <li><a href="/api/exportacao?subcategory=suco_de_uva">/api/exportacao?subcategory=suco_de_uva</a>: Suco de Uva (Exportação).</li>
     </ul>
-    <p>Para as rotas de "Produção" e "Comercialização", você pode adicionar parâmetros <code>start_year</code>, <code>end_year</code> e <code>subcategory</code> (quando aplicável) para filtrar os dados.</p>
+    <p>Você pode adicionar parâmetros <code>start_year</code>, <code>end_year</code> para filtrar os dados. 
+    /api/{categoria}?start_year=2010&end_year=2020 ou /api/{categoria}&{subcategoria}&start_year=2010&end_year=2020</p>
     """
 
 # Inicializo o servidor da API
